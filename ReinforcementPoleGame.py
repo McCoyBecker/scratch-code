@@ -2,7 +2,7 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-env = gym.make('Pendulum-v0')
+env = gym.make('CartPole-v0')
 
 def run_episode(env, parameters):
     observation = env.reset()
@@ -24,7 +24,7 @@ def train():
 
     for _ in range(10000):
         counter += 1
-        parameters = np.random.rand(3) * 2 - 1
+        parameters = np.random.rand(4) * 2 - 1
         reward = run_episode(env,parameters)
         if reward > bestreward:
             bestreward = reward
