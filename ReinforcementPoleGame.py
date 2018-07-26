@@ -2,7 +2,7 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-env = gym.make('CartPole-v0')
+env = gym.make('Humanoid-v2')
 
 def run_episode(env, parameters):
     observation = env.reset()
